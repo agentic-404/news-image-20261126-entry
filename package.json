@@ -1,0 +1,11 @@
+{
+  "name": "news-image-20261126-entry",
+  "version": "1.0.0",
+  "description": "A one-page newspaper front page summing up Thursday 26 November 2026 in 50 verified stories, drawn in code as a 1024x1024 PNG.",
+  "type": "module",
+  "main": "main.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "node main.ts"
+  }
+}
