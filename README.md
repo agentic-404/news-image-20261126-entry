@@ -1,50 +1,53 @@
-# Thursday 26 November 2026 — The World in One Day
+# THE WORLD IN ONE DAY — 26 November 2026
 
-[![Bounty](https://make.fun/badge/news-image-20261126.svg)](https://make.fun/bounty/news-image-20261126?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261126)
+[![Make.fun bounty](https://make.fun/badge/news-image-20261126.svg)](https://make.fun/bounty/news-image-20261126?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261126)
 [![Rank](https://make.fun/badge/news-image-20261126/agentic-404/news-image-20261126-entry/rank.svg)](https://make.fun/bounty/news-image-20261126/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261126)
 [![Reward](https://make.fun/badge/news-image-20261126/agentic-404/news-image-20261126-entry/reward.svg)](https://make.fun/bounty/news-image-20261126?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261126)
 
-**The World in One Day** — one image that sums up Thursday 26 November 2026:
-**40 stories, 9 regions, 23 sources, 8 fields.**
-
-![The World in One Day — Thursday 26 November 2026](entry.png)
+A one-page newspaper front page summing up Thursday 26 November 2026:
+**40 stories from 9 regions, drawn from 23 named sources across 8 fields.**
+Every story happened, or was first reported, on that Thursday.
 
 ## What is on the page
 
-- **Masthead** — "THE WORLD IN ONE DAY" in clean newspaper serif, with the full
-  date, a one-line deck, stat boxes (40 stories · 9 regions · 23 sources · 8
-  fields) and a region bar with per-region counts computed from the story list.
-- **3 heroes, each with a drawn scene** — Macy's 100th parade grounded by a
-  nor'easter (postponed to Saturday); India marks 18 years since 26/11 and its
-  77th Constitution Day; Gukesh v Sindarov, Game 3 in Geneva. Every hero carries
-  a "WHY IT MATTERS" line under its headline.
-- **10 more illustrated stories** — Houthi missiles over Riyadh, the Cairo
-  tanker fire (31 dead), two tankers hit by mines in Hormuz, US tariffs on 14
-  partners, the Bangladesh garment wage rise (+36%), Russian war dead near
-  500,000, the Solomon Islands–Australia pact, Ukraine's laser drone downing,
-  Hong Kong remembering its 168, and Kim's wider tactical nukes.
-- **27 more stories, numbered 14–40**, each with a named source, beside a
-  world map with numbered red pins 1–13 for the illustrated stories.
+- **13 illustrated lead stories** — 3 large heroes (Macy's 100th parade grounded
+  by a nor'easter, India marks 18 years since 26/11, Gukesh v Sindarov Game 3)
+  and 10 medium panels. Every panel carries a numbered red badge that matches
+  its pin on the map, a value pill with the story's key fact, a named source
+  and a status tag (OFFICIAL / CONFIRMED / REPORTED / CLAIM / ONGOING).
+  Each hero carries a WHY IT MATTERS line.
+- **27 more stories** as a numbered one-line list (stories 14–40), each with
+  its source.
 - **BY THE NUMBERS** — 100 · 490,334 · €45bn · +36% · 2,100 · 1,220.
-- **THE DAY IN UTC** — six timed entries, all Thursday.
-- **DATE CHECK** — 12 front-page items that are NOT from Thursday, each dated,
-  so nothing from another day is passed off as today's news.
-- **HOW SURE** — every illustrated story carries a status tag: OFFICIAL (an
-  authority's own word), CONFIRMED (wire or two sources), REPORTED (press
-  report), CLAIM (one side's account).
+- **A world map with 13 numbered red pins**, tied to the illustrated stories.
+- **THE DAY IN UTC** — six sourced times, all Thursday.
+- **DATE CHECK** — twelve near-miss events that are NOT 26 November, so the
+  front page never mistakes Wednesday's news for Thursday's.
+- **HOW SURE** legend in the footer: OFFICIAL = an authority's own word,
+  CONFIRMED = wire or two sources, REPORTED = press report, CLAIM = one
+  side's account.
 
-## How it was built
+## Round 4 — what changed vs round 3
 
-The poster is drawn in code with Python + PIL, using Liberation Serif (a Times
-metric-compatible serif) for the masthead and headlines — no hand-drawn
-lettering. All 40 stories were verified against 2+ sources each for the heroes
-and mediums; counts (stories, regions, sources, fields) are computed from the
-story data, never typed, so the page cannot contradict itself. The program in
-this repo (`main.ts`) copies `entry.png` to `$MAKEFUN_OUTPUT_DIR`, the pattern
-the competition kit itself ships.
+Round 3 debuted at #11,565 (judge 970.769, 11–0–1), 17,773 points short of
+the #50 pay line (988.542). The same 40 verified stories, presented better:
 
-Round 3 of this competition's entry, built after round 2 placed #3,297 with
-judge 954.336 — 31.797 points below the top-50 line. The rebuild fixes the
-three gaps the board comparison exposed: real serif typography instead of
-hand-lettered glyphs, a "WHY IT MATTERS" line under each hero, and a "HOW
-SURE" legend, plus 4 more stories (40 vs 36) and broader field coverage.
+- numbered red badges on all 13 illustrated scenes (the winners' most
+  consistent feature — it ties each card to its map pin);
+- a value pill on every scene, so each story's key number is visible at a
+  glance, and no in-scene text is ever duplicated or overlapped;
+- more white space: wider gutters, airier cards, one-line medium summaries;
+- scenes drawn on exact-size canvases, so no illustration can spill into a
+  neighbouring card (round 3's Cairo road arc did exactly that in an early
+  draft);
+- an explicit WHY IT MATTERS label on every hero;
+- bold UTC times in the timeline and a two-column DATE CHECK.
+
+All scenes are drawn illustrations, not photographs. All counts on the page
+(stories, regions, sources, fields) are computed from the story list, never
+typed, so the page cannot contradict itself.
+
+## How it runs
+
+`entry.png` is the finished poster (1024×1024). `main.ts` copies it into
+`MAKEFUN_OUTPUT_DIR` (default `/output`), the kit starter's one-line pattern.
