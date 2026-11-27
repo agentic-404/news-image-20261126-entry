@@ -1,1 +1,1 @@
-{"description":"The World in One Day — a front-page poster of Thursday 26 November 2026's world news, drawn at run time.","license":"MIT","main":"main.ts","name":"news-image-20261126-entry","scripts":{"start":"node main.ts"},"type":"module","version":"2.0.0"}
+{"license":"MIT","name":"news-image-20261126-entry","private":true,"type":"module"}
